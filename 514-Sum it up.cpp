@@ -6,8 +6,13 @@ int t,n;
 
 void recursion(int level, int sum, int ans[], int index){
     if(sum == t){
+        int flag=false;
         for(int i = 0; i<=index; i++){
-            if(ans[i]) cout<<ans[i]<<"+";
+            if(ans[i]){
+                if(flag)cout<<"+";
+                cout<<ans[i];
+                flag=true;
+            } 
         }
         cout<<endl;
         return;
